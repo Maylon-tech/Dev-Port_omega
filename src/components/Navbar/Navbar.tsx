@@ -1,13 +1,13 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Link from "next/link"
 import Logo from "../Logo"
 import LinkButton from "../LinkButton"
-import { LuDownload } from "react-icons/lu"
+import { LuDownload, LuMenu, LuX } from "react-icons/lu"
 import MobileNav from "./MobileNav"
 
-const navLinks = [
+export const navLinks = [
   {
     url: "#home",
     label: "Home"
@@ -40,11 +40,23 @@ const navLinks = [
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false)
+  const [navBackground, setNavBackground] = useState(false)
 
+  useEffect(() => {
+    const navHandler = () => {
+      if (window.scrollY >= 90) setNavBackground(true)
+      if(window.scrollY < 90) setNavBackground(false)
+    }
+    
+    window.addEventListener("scroll", navHandler)
 
+    return () => {
+      return window.removeEventListener("scroll", navHandler)
+    }
+  }, [])
 
   return (
-    <nav className="fixed z-50 flex items-center justify-between p-4 bg-green-800 text-white w-full h-15">
+    <nav className={`fixed z-50 flex items-center justify-between p-4 bg-green-800 text-white w-full h-15 ${navBackground ? "bg-slate-900 shadow-md" : ""}`} >
       {/* LOGO */}
       <div className="text-3xl font-semibold">
         <Logo />
@@ -80,6 +92,14 @@ const Navbar = () => {
         />
       </div>
 
+      <button
+        onClick={() => setNavOpen(!navOpen)}
+        className="w-8 h-8 cursor-pointer text-white z-100 lg:hidden"
+      >
+        {
+          navOpen ? <LuX size={30} /> : <LuMenu size={30} />
+        }
+      </button>
       <MobileNav
         navOpen={navOpen}
       />
