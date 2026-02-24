@@ -1,4 +1,9 @@
+"use client"
+
 import Image from "next/image"
+import AnimatedIntro from "./AnimatedIntro"
+import LinkButton from "@/components/LinkButton"
+import { LuArrowBigRight } from "react-icons/lu"
 
 
 const HeroSection = () => {
@@ -18,8 +23,15 @@ const HeroSection = () => {
         </div>
 
         <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl my-6 font-bold tracking-wide text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-gray-300">
-        Hello! I &apos; a Web Developer
-      </h1>
+          Hello! I &apos; a Web Developer
+        </h1>
+
+        <AnimatedIntro />
+        <LinkButton
+          href="#projects"
+          text="See My Work"
+          icon={LuArrowBigRight}
+        />
       </div>
 
 
