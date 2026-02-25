@@ -1,5 +1,7 @@
 import Link from "next/link"
 import { navLinks } from "./Navbar"
+import LinkButton from "../LinkButton"
+import { LuDownload } from "react-icons/lu"
 
 
 interface MobileNavProps {
@@ -14,7 +16,7 @@ const MobileNav = ({ navOpen }: MobileNavProps) => {
     return (
         <>
             {/* InsetBackground */}
-            <div className={`fixed inset-0 transform right-0 z-50 bg-black opacity-30 w-full h-screen transition-all duration-500 ${showMobileNav}`}>
+            <div className={`fixed inset-0 transform right-0 z-50 bg-black opacity-30 w-full h-screen transition-all duration-500 ${showMobileNav} lg:hidden"`}>
             </div>
 
             {/* Navlinks */}
@@ -33,6 +35,15 @@ const MobileNav = ({ navOpen }: MobileNavProps) => {
                         )
                     })
                 }
+                <div className="my-4">
+                    <LinkButton
+                        href="/document/cd.pdf"
+                        text="Download CV"
+                        download 
+                        icon={LuDownload}
+                        iconPosition="left"
+                    />
+                </div>
             </ul>
             
         </>

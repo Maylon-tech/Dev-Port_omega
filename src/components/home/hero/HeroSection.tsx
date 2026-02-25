@@ -4,11 +4,29 @@ import Image from "next/image"
 import AnimatedIntro from "./AnimatedIntro"
 import LinkButton from "@/components/LinkButton"
 import { LuArrowBigRight } from "react-icons/lu"
-
+import Particles from './Particles';
 
 const HeroSection = () => {
   return (
-    <section id="home" className='h-screen relative flex justify-center items-center overflow-hidden flex-col'>
+    <section
+      id="home"
+      className='h-screen relative flex justify-center items-center overflow-hidden flex-col'
+    >
+
+      <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+        <Particles
+          particleColors={["#ffffff", "#ffffff"]}
+          particleCount={200}
+          particleSpread={10}
+          speed={0.1}
+          particleBaseSize={100}
+          moveParticlesOnHover
+          alphaParticles={false}
+          disableRotation={false}
+          pixelRatio={1}
+        />
+      </div>
+
       <div className="absolute z-10 flex flex-col items-center">
         {/* glowing image */}
         <div className="w-37.5 h-37.5 relative">
