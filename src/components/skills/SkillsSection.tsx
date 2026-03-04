@@ -46,8 +46,17 @@ const SkillsSection = () => {
         {
             skills.map((skill, index) => {
                 return (
-                    <div className="" key={index}>
-
+                    <div
+                        className="bg-slate-800 text-center w-40 h-48 rounded-3xl flex flex-col items-center justify-center shadow-lg transition:hover:scale-110"
+                        key={index}
+                    >
+                        <div className="text-5xl text-gray-300">
+                            {skill.icon}
+                        </div>
+                        <p className="text-2xl font-semibold my-4 text-gray-200">
+                            {skill.skillLevel}%
+                        </p>
+                        <p className="text-indigo-500 font-semilbold">{skill.name}</p>
                     </div>
                 )
             })
