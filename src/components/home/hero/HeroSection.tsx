@@ -12,7 +12,7 @@ const HeroSection = () => {
       id="home"
       className='h-screen relative flex justify-center items-center overflow-hidden flex-col'
     >
-
+        {/* Particles  */}
       <div style={{ width: '100%', height: '600px', position: 'relative' }}>
         <Particles
           particleColors={["#ffffff", "#ffffff"]}
@@ -29,7 +29,7 @@ const HeroSection = () => {
 
       <div className="absolute z-10 flex flex-col items-center">
         {/* glowing image */}
-        <div className="w-37.5 h-37.5 relative">
+        <div className="w-37.5 h-37.5 relative" data-aos="fade-up">
           <div className="absolute inset-0 rounded-full bg-linear-to-r from-blue-500 to-purple-600 blur-lg animate-pulse opacity-50">
             <Image
               src="/images/image.png"

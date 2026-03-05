@@ -5,10 +5,11 @@ import SkillsSection from "@/components/skills/SkillsSection"
 import ResumeSection from "@/components/resume/ResumeSection"
 import TestimonialsSection from "@/components/testimonial/TestimonialsSection"
 import ContactSection from "@/components/contact/ContactSection"
+import AnimationLayout from "../../layouts/AnimationLayout"
 
 export default function Home() {
   return (
-    <div>
+    <AnimationLayout>
       <HeroSection />
       <ServiceSection />
       <ResumeSection />
@@ -16,6 +17,6 @@ export default function Home() {
       <SkillsSection />
       <TestimonialsSection />
       <ContactSection />
-    </div>
+    </AnimationLayout>
   );
 }
