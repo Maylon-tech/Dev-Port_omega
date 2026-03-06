@@ -3,7 +3,7 @@ import Typewriter from 'typewriter-effect'
 
 const AnimatedIntro = () => {
   return (
-    <div className="text-lg sm:text-2xl h-30 px-8 text-center font-medium text-gray-400">
+    <div className="text-lg sm:text-2xl h-30 px-8 text-center font-medium text-gray-400" data-aos="fade-up" data-aos-delay="400">
       Hi, I&apos;m Nemoto - A Passionate
       <span className="text-indigo-400 font-bold">
         <Typewriter 

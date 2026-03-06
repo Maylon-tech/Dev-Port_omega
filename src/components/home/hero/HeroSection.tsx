@@ -29,10 +29,10 @@ const HeroSection = () => {
 
       <div className="absolute z-10 flex flex-col items-center">
         {/* glowing image */}
-        <div className="w-37.5 h-37.5 relative" data-aos="fade-up">
-          <div className="absolute inset-0 rounded-full bg-linear-to-r from-blue-500 to-purple-600 blur-lg animate-pulse opacity-50">
+        <div className="w-45 h-45 relative" data-aos="fade-up">
+          <div className="absolute inset-0 rounded-full bg-linear-to-r from-blue-500 to-purple-600 animate-pulse opacity-50">
             <Image
-              src="/images/image.png"
+              src="/images/nemoto.jpg"
               alt="image"
               fill
               className="rounded-full object-cover"
@@ -40,7 +40,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl my-6 font-bold tracking-wide text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-gray-300">
+        <h1 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl my-6 font-bold tracking-wide text-transparent bg-clip-text bg-linear-to-r from-indigo-500 to-gray-300" data-aos="fade-up" data-aos-delay="200">
           Hello! I &apos; a Web Developer
         </h1>
 
@@ -49,6 +49,10 @@ const HeroSection = () => {
           href="#projects"
           text="See My Work"
           icon={LuArrowBigRight}
+          rounded
+          aosType="fade-up"
+          aosDelay={600}
+          animate
         />
       </div>
 
