@@ -36,7 +36,12 @@ const TestimonialsSection = () => {
                 {
                       testimonials.map((testimonial, index) => {
                           return (
-                            <div key={index} className="bg-gray-800 border border-gray-700 rounded-xl p-6 shadow-lg">
+                            <div 
+                                key={index}
+                                className="bg-gray-800 border border-gray-700 rounded-xl p-6 shadow-lg"
+                                data-aos="fade-right"
+                                data-aos-dela={index * 100}
+                              >
                                 <div className="flex items-center mb-4">
                                       {[...Array(5)].map((_, index) => (
                                           <FaStar

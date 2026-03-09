@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -21,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
         className={`${poppins.variable}  antialiased bg-slate-900`}
       >
@@ -30,6 +31,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <ScrollToTopButton />
       </body>
     </html>
   );

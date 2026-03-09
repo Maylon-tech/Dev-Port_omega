@@ -6,10 +6,11 @@ import { LuDownload } from "react-icons/lu"
 
 interface MobileNavProps {
     navOpen: boolean
+    setNavOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 
-const MobileNav = ({ navOpen }: MobileNavProps) => {
+const MobileNav = ({ navOpen, setNavOpen }: MobileNavProps) => {
     const showMobileNav = navOpen ? "translate-x-0" : "translate-x-[100%]"    
 
 
@@ -26,6 +27,7 @@ const MobileNav = ({ navOpen }: MobileNavProps) => {
                         return (
                             <li key={link.url}>
                                 <Link
+                                    onClick={() => setNavOpen(false)}
                                     href={link.url}
                                     className="flex justify-center items-center text-xl font-medium text-white py-4 px-6 rounded-lg hover:bg-slate-700/50 hover:text-cyan-300 transition-all duration-300 border-b border-slate-700/30 w-full text-center"
                                 >

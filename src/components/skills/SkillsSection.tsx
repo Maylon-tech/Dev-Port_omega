@@ -46,7 +46,7 @@ const SkillsSection = () => {
             skills.map((skill, index) => {
                 return (
                     <div
-                        className="bg-slate-800 text-center w-40 h-48 rounded-3xl flex flex-col items-center justify-center shadow-lg transition:hover:scale-110"
+                        className="bg-slate-800 text-center w-40 h-48 rounded-3xl flex flex-col items-center justify-center shadow-lg transition hover:scale-110"
                         key={index}
                         data-aos="flip-right"
                         data-aos-delay={index * 100}

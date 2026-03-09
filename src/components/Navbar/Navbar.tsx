@@ -102,6 +102,7 @@ const Navbar = () => {
       </button>
       <MobileNav
         navOpen={navOpen}
+        setNavOpen={setNavOpen}
       />
 
     </nav>
